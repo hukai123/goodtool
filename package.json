@@ -1,0 +1,22 @@
+{
+  "name": "super-tool",
+  "version": "0.0.1",
+  "description": "打造一款专属超级工具",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hukai123"
+  },
+  "keywords": [
+    "tool",
+    "tools",
+    "super",
+    "time",
+    "dateTime"
+  ],
+  "author": "hukai",
+  "license": "ISC"
+}
