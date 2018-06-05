@@ -52,43 +52,68 @@ You need to install [node](http://nodejs.org/) and [git](https://git-scm.com/) l
 
 ## Features
 ```
-- Time
-- Date
-- Array
+- parseDate
+- parseDatetime
+- getMonDate
+- getSunDate
+- formatJsAdd
+- formatRmbNum
+- indexOfArray
 ```
 
-<!-- 配置参数：  
+配置参数：  
 <table>
     <tr>
+        <th>方法</th>
         <th>参数</th>
         <th>说明</th>
     </tr>
     <tr>
-        <td>app</td>
-        <td>express的实例</td>
+        <td>parseDate(argu)</td>
+        <td>时间戳/时间对象</td>
+        <td>输出格式:  2018-01-01</td>
     </tr>
     <tr>
-        <td>dir</td>
-        <td>放置路由文件的目录</td>
+        <td>parseDatetime(argu)</td>
+        <td>时间戳/时间对象</td>
+        <td>输出格式:  2018-01-01 12:00:00</td>
     </tr>
     <tr>
-        <td>rename</td>
-        <td>设置接口url前缀</td>
+        <td>getMonDate(argu)</td>
+        <td>时间戳/时间对象</td>
+        <td>返回指定日期所在周的周一的日期</td>
     </tr>
     <tr>
-        <td>isCreateDoc</td>
-        <td>是否创建接口文档</td>
+        <td>getSunDate(argu)</td>
+        <td>时间戳/时间对象</td>
+        <td>返回指定日期所在周的周日的日期</td>
     </tr>
-</table> -->
+    <tr>
+        <td>formatJsAdd(a,b)</td>
+        <td>浮点型</td>
+        <td>修正js浮点型数据相加返回异常</td>
+    </tr>
+    <tr>
+        <td>formatRmbNum(argu)</td>
+        <td>数字/数字字符串</td>
+        <td>金钱格式化,千分位加',',如: 632,230</td>
+    </tr>
+    <tr>
+        <td>indexOfArray()</td>
+        <td>(value,array,name = 'name')</td>
+        <td>返回array数组中key值为name(默认为'name')对应的val值==value的索引值</td>
+    </tr>
+</table>
 
-<!-- ```目录
+```目录
 routes
-    |---GET.js
-    |---POST.js
-    |---test
-    |     |---GET.js
-    |     |---PUT.js
-    |     |---PATCH.js
+    |---index.js
+    |---lib
+    |     |---array.js
+    |     |---date-time.js
+    |     |---num.js
+```
+<!-- ```
     |
     |---list
           |---GET.js
@@ -99,7 +124,7 @@ routes
 
 ```bash
 # install dependency
-npm install  -g  super-tool
+npm install goodtool --save
 
 # develop
 npm run dev
